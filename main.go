@@ -12,6 +12,7 @@ func main() {
 		"http://stackoverflow.com",
 		"http://golang.org",
 		"http://mercadolibre.com",
+		"http://amazon.com",
 	}
 
 	c := make(chan string)
@@ -20,6 +21,12 @@ func main() {
 		go checkLink(link, c)
 	}
 
+	fmt.Println(<-c)
+	fmt.Println(<-c)
+	fmt.Println(<-c)
+	fmt.Println(<-c)
+	fmt.Println(<-c)
+	fmt.Println(<-c)
 	fmt.Println(<-c)
 }
 
